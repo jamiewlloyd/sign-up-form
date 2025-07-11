@@ -7,12 +7,14 @@ body {
    height: 100vh;
    margin: 0;
    padding: 0;
+   display: grid;
 }
 
 #side-section {
    width: 25%;
    min-width: 500px;
    height: 100vh;
+   grid-column: 1;
    display: grid;
 }
 
@@ -54,4 +56,9 @@ body {
 
 .img-att a {
    color: white;
+}
+
+#sign-up {
+   grid-column: 2;
+   display: grid;
 }
