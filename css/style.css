@@ -1,5 +1,10 @@
 body {
    margin: 0;
+   font-family: "Fira Sans", sans-serif;
+   font-weight: 500;
+   font-style: normal;
+   font-size: 20px;
+   color: #252525;
 }
 
 #wrapper {
@@ -8,14 +13,20 @@ body {
    margin: 0;
    padding: 0;
    display: grid;
+   grid-template-columns: max-content 1fr;
 }
 
 #side-section {
-   width: 25%;
-   min-width: 500px;
+   width: 450px;
+   min-width: 450px;
    height: 100vh;
    grid-column: 1;
    display: grid;
+
+   @media (width > 1500px) {
+      width: 550px;
+      min-width: 550px;
+   }
 }
 
 .hero {
@@ -30,18 +41,19 @@ body {
 .logo {
    z-index: 20;
    width: 100%;
-   height: 120px;
+   height: 170px;
    grid-column: 1;
    grid-row: 1;
    display: grid;
    justify-content: center;
    align-content: center;
-   background-color: rgb(0, 0, 0, 35%);
-   margin-top: 50px;
 }
 
 #brand {
-   font-size: 80px;
+   font-family: "Macondo Swash Caps", cursive;
+   font-weight: 600;
+   font-style: normal;
+   font-size: 85px;
    margin: 0;
    color: white;
 }
@@ -52,6 +64,8 @@ body {
    justify-self: center;
    align-self: end;
    color: white;
+   font-size: 14px;
+   font-weight: 300;
 }
 
 .img-att a {
@@ -61,4 +75,91 @@ body {
 #sign-up {
    grid-column: 2;
    display: grid;
+   background-color: #f9f9f9;
+   grid-template-rows: 1fr max-content max-content 1fr;
+}
+
+.intro {
+   max-width: 700px;
+   padding-left: 50px;
+   margin: 50px 0;
+   padding-right: 50px;
+   grid-row: 2;
+}
+
+.main-form {
+   grid-row: 3;
+   display: grid;
+}
+
+h2 {
+   font-size: 25px;
+   margin-top: 0;
+   margin-bottom: 35px;
+}
+
+.card {
+   background-color: white;
+   width: calc(100%-60px);
+   padding: 40px 50px;
+   filter: drop-shadow(0px 7px 5px #d7d7d7);
+}
+
+input,
+button {
+   font: inherit;
+}
+
+.inputs {
+   width: 80%;
+   display: grid;
+   gap: 25px 60px;
+   grid-template-columns: 270px 270px;
+
+   @media (width < 1200px) {
+      grid-template-columns: auto;
+   }
+}
+
+.form-group {
+   display: grid;
+   gap: 3px;
+   max-width: 270px;
+}
+
+label {
+   font-size: 12px;
+   letter-spacing: 0.2cap;
+   color: #252525;
+}
+
+input {
+   border-radius: 3px;
+   border: 1px solid #d9d9d9;
+   padding: 8px;
+   font-size: 16px;
+   font-weight: 300;
+}
+
+button {
+   padding: 10px;
+   border-radius: 8px;
+   border: 0px;
+   background-color: #bbe68f;
+   width: 250px;
+   height: 50px;
+   font-size: 20px;
+   margin: 50px 50px 10px 50px;
+}
+
+.login {
+   margin: 20px 53px;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.login a {
+   text-decoration: none;
+   font-weight: 600;
+   color: #252525;
 }
