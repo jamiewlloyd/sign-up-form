@@ -141,15 +141,28 @@ input {
    font-weight: 300;
 }
 
+input:focus {
+   outline: 1px solid rgb(0, 162, 255);
+}
+
+input[type="text"]:focus:invalid {
+   outline: 1px solid rgb(0, 162, 255);
+}
+
+input:focus:invalid {
+   outline: 1px solid red;
+}
+
 button {
    padding: 10px;
    border-radius: 8px;
    border: 0px;
-   background-color: #bbe68f;
+   background-color: #b0de83;
    width: 250px;
    height: 50px;
    font-size: 20px;
    margin: 50px 50px 10px 50px;
+   cursor: pointer;
 }
 
 .login {
